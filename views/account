@@ -1,0 +1,5 @@
+<div>
+    <p>Bonjour</p>
+    <p><%= name %></p>
+    <p>Address : %= address %></p>
+</div>
