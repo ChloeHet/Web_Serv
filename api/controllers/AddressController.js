@@ -1,23 +1,14 @@
 module.exports = {
-    ma_methode: function(reg, res) {
-        return res.view('homepage');
+    ma_methode: function(req, res) {
+        //return res.view('homepage');
+        return res.json({user: 'toto'});
     },
 
-    find: function(rep, res){
-        res.json({user: 'toto'});
-    },
-
-    find: function(rep,res){
-        Address.find().exec(function(err, records){
-            return res.json(records);
-        });
-    },
-
-    find: function(rep,res) {
+    find: function(req,res){
         var where = {
             street: 'test'
         };
-        Address.find(where).exec(function(err,records){
+        Address.find(where).exec(function (err, records){
             return res.json(records);
         });
     }

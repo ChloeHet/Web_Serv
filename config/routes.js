@@ -44,8 +44,30 @@ module.exports.routes = {
   'get /bis':{
     controller: 'AddressController',
     action: 'ma_methode'
+  },
+
+  'get / address':{
+    controller: 'AdressController',
+    action:'find'
+  },
+
+  'get / account': {
+    controller: 'AccountController',
+      action: 'index'
+  },
+
+  'get /login': {
+        view: 'login'
+  },
+
+  'post /login': 'AuthController.login',
+
+  '/logout': 'AuthController.logout',
+
+  'get /signup': {
+     view: 'signup'
   }
-  /***************************************************************************
+      /***************************************************************************
   *                                                                          *
   * Custom routes here...                                                    *
   *                                                                          *
