@@ -47,7 +47,7 @@ module.exports.routes = {
   },
 
   'get / address':{
-    controller: 'AdressController',
+    controller: 'AddressController',
     action:'find'
   },
 

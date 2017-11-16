@@ -18,6 +18,19 @@ module.exports = {
             minLength: 6,
             required: true
         },
+        //An user may have many addresses
+        firstName: {
+            type: 'string'
+        },
+        lastName: {
+            type: 'string'
+        },
+
+        //Add a reference to addresses
+        addresses: {
+            collection: 'address',
+            via: 'owner'
+        },
         toJSON: function() {
             var obj = this.toObject();
             delete obj.password;
