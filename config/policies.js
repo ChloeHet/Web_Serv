@@ -21,8 +21,9 @@ module.exports.policies = {
 
     '*': true,
 
-    'PostController': {
-        '*': 'isAuthentificated'
+    'AccountController': {
+        '*': 'isAuthenticated',
+        'verrou': true
     },
 
   /***************************************************************************

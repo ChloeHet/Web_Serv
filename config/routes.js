@@ -46,14 +46,14 @@ module.exports.routes = {
     action: 'ma_methode'
   },
 
-  'get / address':{
+  'get /address':{
     controller: 'AddressController',
     action:'find'
   },
 
-  'get / account': {
+  'get /account': {
     controller: 'AccountController',
-      action: 'index'
+    action: 'index'
   },
 
   'get /login': {
@@ -66,6 +66,11 @@ module.exports.routes = {
 
   'get /signup': {
      view: 'signup'
+  },
+
+  'get /verrou' : {
+    controller : 'AccountController',
+    action: 'verrou'
   }
       /***************************************************************************
   *                                                                          *
