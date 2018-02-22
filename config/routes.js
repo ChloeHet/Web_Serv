@@ -71,8 +71,14 @@ module.exports.routes = {
   'get /verrou' : {
     controller : 'AccountController',
     action: 'verrou'
-  }
-      /***************************************************************************
+  },
+
+  'get /account/addresses': {
+    controller: 'AccountController',
+    action: 'addresses'
+  },
+
+    /***************************************************************************
   *                                                                          *
   * Custom routes here...                                                    *
   *                                                                          *
