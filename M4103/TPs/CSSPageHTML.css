@@ -1,0 +1,38 @@
+/*For input number */
+.blanc{
+    background-color: rgb(255,255,255);
+}
+.vert {
+    background-color: rgb(150,255,150);
+}
+.rouge {
+    background-color: rgb(255,150,150);
+}
+
+/* MENU */
+
+#nav, #nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+#nav a {
+    display: block;
+    width: 10em;
+}
+
+#nav li {
+    float: left;
+    width: 10em;
+}
+
+#nav li ul {
+    position: absolute;
+    width: 10em;
+    left: -999em;
+}
+
+#nav li:hover ul, #nav li.sfhover ul {
+    left: auto;
+}

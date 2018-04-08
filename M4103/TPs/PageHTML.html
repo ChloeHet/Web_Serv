@@ -7,8 +7,9 @@
     <meta name="keywords" content="tp1, js, exercice 1, m413" />
     <title>TP1</title>
     <script type="text/javascript" src="Functions.js"></script>
+    <link rel="stylesheet" href="CSSPageHTML.css">
 </head>
-<body onload="inverseTexte();datemodif();">
+<body onload="sfHover()">
     <h1 id="titre" class="firstOrLast">Exercice 1</h1>
     <h2>1er sous-titre</h2>
     <h2 class="firstOrLast">2eme sous-titre</h2>
@@ -26,5 +27,43 @@
     </div>
     <div id="date_modif"></div>
     <p id="nb_jours" onclick="majNbJours()">Il reste xxx jours avant le 19 juillet 2018</p>
+    <p id="horloge"></p>
+    <div id="grafHorloge">
+        <p>Heure actuelle Europe/Paris (Heure d'été UTC+2)</p>
+    </div>
+
+    <form name="formColor">
+        <input type="text" id="myInput" oninput="nbInput()" class="blanc">
+    </form>
+
+
+    <aside>
+        <ul id="nav">
+            <li><a href="#"><img class="PlusOuMinus" src="http://users.polytech.unice.fr/~rey/images/plus.gif">Menu 1</a>
+                <ul>
+                    <li><a href="#nogo">Sous-menu 1.1</a></li>
+                    <li><a href="#nogo">Sous-menu 1.2</a></li>
+                    <li><a href="#nogo">Sous-menu 1.3</a></li>
+                    <li><a href="#nogo">Sous-menu 1.4</a></li>
+                </ul>
+            </li>
+            <li><a href="#"><img class="PlusOuMinus" src="http://users.polytech.unice.fr/~rey/images/plus.gif">Menu 2</a>
+                <ul>
+                    <li><a href="#nogo">Sous-menu 2.1</a></li>
+                    <li><a href="#nogo">Sous-menu 2.2</a></li>
+                    <li><a href="#nogo">Sous-menu 2.3</a></li>
+                    <li><a href="#nogo">Sous-menu 2.4</a></li>
+                </ul>
+            </li>
+            <li><a href="#"><img class="PlusOuMinus" src="http://users.polytech.unice.fr/~rey/images/plus.gif">Menu 3</a>
+                <ul>
+                    <li><a href="#nogo">Sous-menu 3.1</a></li>
+                    <li><a href="#nogo">Sous-menu 3.2</a></li>
+                    <li><a href="#nogo">Sous-menu 3.3</a></li>
+                    <li><a href="#nogo">Sous-menu 3.4</a></li>
+                </ul>
+            </li>
+        </ul>
+    </aside>
 </body>
 </html>
