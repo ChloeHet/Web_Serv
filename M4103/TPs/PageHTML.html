@@ -9,13 +9,10 @@
     <script type="text/javascript" src="Functions.js"></script>
     <link rel="stylesheet" href="CSSPageHTML.css">
 </head>
-<body onload="sfHover()">
-    <h1 id="titre" class="firstOrLast">Exercice 1</h1>
-    <h2>1er sous-titre</h2>
-    <h2 class="firstOrLast">2eme sous-titre</h2>
-    <h3 class="firstOrLast">Explication</h3>
-    <h3>Développement</h3>
-    <h3>Tests</h3>
+<body onload="defTitre1();inverseTexte();datemodif();menuDer(-1);majGraphH();sauvegarde();">
+    <h1 id="titre" class="firstOrLast">TD 1 : Exercice 1 (6.1. titre)</h1>
+    <h2>Exercice 1 : 6.2</h2>
+    <h3 class="firstOrLast">Hello</h3>
     <div>
         <p>
             Bienvenue sur la page de <span>Chloé HETYEI</span>.
@@ -25,45 +22,76 @@
             Page en cours de <span>maintenance</span>...
         </p>
     </div>
+    <h2 class="firstOrLast">Exercice 1 : 6.3</h2>
+    <h3>Dernière modification</h3>
     <div id="date_modif"></div>
+
+    <h2>Exercice 2 : 7</h2>
+    <h3>Reste de jours</h3>
     <p id="nb_jours" onclick="majNbJours()">Il reste xxx jours avant le 19 juillet 2018</p>
-    <p id="horloge"></p>
+
+    <h2>Exercice 2 : 7.1</h2>
+    <h3>Horloge</h3>
+    <p onload="majHorloge1()" id="horloge"></p>
     <div id="grafHorloge">
-        <p>Heure actuelle Europe/Paris (Heure d'été UTC+2)</p>
+        <p>Heure actuelle Europe/Paris (Heure d'été UTC+2) :</p>
+        <div><img /><img /> : <img /><img /> : <img /><img /></div>
     </div>
 
-    <form name="formColor">
+    <h2>Exercice 3 : 8.1</h2>
+    <h3>Input text</h3>
+    <form name="formColor" class="inputNB">
+        <p>Écrivez un nombre :</p>
         <input type="text" id="myInput" oninput="nbInput()" class="blanc">
     </form>
 
-
+    <h2>Exercice 3 : 8.2</h2>
+    <h3>Menu déroulant</h3>
     <aside>
-        <ul id="nav">
-            <li><a href="#"><img class="PlusOuMinus" src="http://users.polytech.unice.fr/~rey/images/plus.gif">Menu 1</a>
+        <ul id="menu">
+            <li onclick="menuDer(0)">Menu 1
                 <ul>
-                    <li><a href="#nogo">Sous-menu 1.1</a></li>
-                    <li><a href="#nogo">Sous-menu 1.2</a></li>
-                    <li><a href="#nogo">Sous-menu 1.3</a></li>
-                    <li><a href="#nogo">Sous-menu 1.4</a></li>
+                    <li><a href="#">Sous-menu 1.1</a></li>
+                    <li><a href="#">Sous-menu 1.2</a></li>
+                    <li><a href="#">Sous-menu 1.3</a></li>
+                    <li><a href="#">Sous-menu 1.4</a></li>
                 </ul>
             </li>
-            <li><a href="#"><img class="PlusOuMinus" src="http://users.polytech.unice.fr/~rey/images/plus.gif">Menu 2</a>
+            <li onclick="menuDer(1)">Menu 2
                 <ul>
-                    <li><a href="#nogo">Sous-menu 2.1</a></li>
-                    <li><a href="#nogo">Sous-menu 2.2</a></li>
-                    <li><a href="#nogo">Sous-menu 2.3</a></li>
-                    <li><a href="#nogo">Sous-menu 2.4</a></li>
+                    <li>Sous-menu 2.1</li>
+                    <li>Sous-menu 2.2</li>
+                    <li>Sous-menu 2.3</li>
+                    <li>Sous-menu 2.4</li>
                 </ul>
             </li>
-            <li><a href="#"><img class="PlusOuMinus" src="http://users.polytech.unice.fr/~rey/images/plus.gif">Menu 3</a>
+            <li onclick="menuDer(2)">Menu 3
                 <ul>
-                    <li><a href="#nogo">Sous-menu 3.1</a></li>
-                    <li><a href="#nogo">Sous-menu 3.2</a></li>
-                    <li><a href="#nogo">Sous-menu 3.3</a></li>
-                    <li><a href="#nogo">Sous-menu 3.4</a></li>
+                    <li>Sous-menu 3.1</li>
+                    <li>Sous-menu 3.2</li>
+                    <li>Sous-menu 3.3</li>
+                    <li>Sous-menu 3.4</li>
+                </ul>
+            </li>
+            <li onclick="menuDer(3)">Menu 4
+                <ul>
+                    <li>Sous-menu 3.1</li>
+                    <li>Sous-menu 3.2</li>
+                    <li>Sous-menu 3.3</li>
+                    <li>Sous-menu 3.4</li>
                 </ul>
             </li>
         </ul>
     </aside>
+
+    <h2>Exercice 4 : 9</h2>
+    <h3>Recherche</h3>
+    <p><input type="text" id="recherche" value="" name="recherche"/>
+        <input onclick="recherche(document.getElementById('recherche').value);" type="button" value="Rechercher" />
+    </p>
+
+    <input type="text" id="rechercheInt" onkeypress="rechercheInteractive(document.getElementById('rechercheInt').value);"/>
+
+
 </body>
 </html>
